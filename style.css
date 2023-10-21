@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 0.625rem;
+}
+
+
+header {
+    height: 12rem;
+    background-color: rgb(132, 66, 194);
+    width: 100%;
+
+}
+
+.product-filter {
+    height: 100%;
+    max-width: 1128px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* margin: auto; */
+}
+
+.input-search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-search>input {
+    width: 50%;
+    padding: 1rem;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
