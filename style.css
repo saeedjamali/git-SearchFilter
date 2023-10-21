@@ -10,7 +10,7 @@ html {
 
 
 header {
-    height: 12rem;
+    height: 15rem;
     background-color: rgb(132, 66, 194);
     width: 100%;
 
@@ -24,7 +24,11 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    /* margin: auto; */
+    margin: auto;
+}
+
+.product-filter > h1{
+    margin: 1.4rem;
 }
 
 .input-search {
@@ -32,6 +36,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .input-search>input {
@@ -40,4 +45,102 @@ header {
     border-radius: 4px;
     outline: none;
     border: none;
+    font-size: 1.4rem;
+}
+
+
+
+.filterBtn {
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid rgb(186, 112, 235);
+    border-radius: 4px;
+    margin: 0 1rem;
+    font-weight: 700;
+    color: blueviolet;
+
+}
+
+
+.products {
+    max-width: 1128px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.product {
+    height: 28rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    border: 2px solid rgb(186, 112, 235);
+    margin: 1rem auto;
+}
+
+.img-product {
+    width: 100%;
+    height: 70%;
+
+}
+
+.img-product>img {
+    width: 100%;
+    height: 100%;
+    background-position: 0%;
+    background-repeat: no-repeat;
+    object-fit: fill;
+    border-radius: 4px 4px 0 0;
+}
+
+
+.desc-product {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.desc-product>span {
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.price-product {
+    color: rgb(186, 112, 235);
+}
+
+
+
+@media only screen and (max-width: 525px) {
+    .filterBtn {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin: 2rem auto;
+    }
+
+    header {
+        height: fit-content;
+        background-color: rgb(132, 66, 194);
+        width: 100%;
+    
+    }
 }
