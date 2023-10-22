@@ -39,8 +39,14 @@ header {
     margin-bottom: 1rem;
 }
 
-.input-search>input {
+.input-search>form {
     width: 50%;
+    position: relative;
+
+}
+
+#search {
+    width: 100%;
     padding: 1rem;
     border-radius: 4px;
     outline: none;
@@ -48,10 +54,21 @@ header {
     font-size: 1.4rem;
 }
 
+#counter {
+    position: absolute;
+    right: 1.2rem;
+    top: 0.8rem;
+    color: white;
+    background-color: blueviolet;
+    font-size: 1.4rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.counter {
-    color: blueviolet;
-    
 }
 
 .filterBtn {
@@ -63,7 +80,7 @@ header {
     margin: 0 1rem;
     font-weight: 700;
     color: blueviolet;
-
+    cursor: pointer;
 }
 
 

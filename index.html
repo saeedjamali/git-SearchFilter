@@ -11,20 +11,26 @@
       <section class="product-filter">
         <h1>Product Filter</h1>
         <div class="input-search">
-          <input type="text" name="" id="search" placeholder="Search Product" />
-          <span class="counter">2</span>
+          <form>
+            <input
+              type="text"
+              name=""
+              id="search"
+              placeholder="Search Product"
+            />
+            <span id="counter"></span>
+          </form>
         </div>
         <div>
-          <button class="filterBtn btnnAll">All</button>
-          <button class="filterBtn btnWatch">Watch</button>
-          <button class="filterBtn btnShirt">Shirt</button>
-          <button class="filterBtn btnJew">Jewelry</button>
-          <button class="filterBtn btnGown">Gown</button>
+          <button class="filterBtn btnnAll" data-class-id="1">All</button>
+          <button class="filterBtn btnWatch" data-class-id="2">Watch</button>
+          <button class="filterBtn btnShirt" data-class-id="3">Shirt</button>
+          <button class="filterBtn btnJew" data-class-id="4">Jewelry</button>
+          <button class="filterBtn btnGown" data-class-id="5">Gown</button>
         </div>
       </section>
     </header>
     <section class="products">
-   
       <!-- <div class="product">
         <div class="img-product">
           <img src="img/g2.jpg" alt="" />
@@ -36,7 +42,7 @@
       </div> -->
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script type="module" src="app.js"></script>
   </body>
 </html>

@@ -2,9 +2,9 @@
 //* Declare Dom object
 
 const inputSearch = document.querySelector("#search");
-const btnFilter = document.querySelectorAll(".btnFilter");
+const btnFilter = document.querySelectorAll(".filterBtn");
 const productsDOM = document.querySelector(".products");
-
+const counterDOM = document.querySelector("#counter");
 //*
 let products = [],
   currentProducts = [],
@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((result) => {
       products = result.data;
       currentProducts = products;
+      renderProduct(currentProducts);
+      counterDOM.innerHTML = currentProducts.length;
     })
     .catch((err) => {
       console.log(err.message);
@@ -26,10 +28,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 inputSearch.addEventListener("input", (e) => {
-  filterProduct.keySearch = e.target.value;
-  currentProducts = findProduct(products, filterProduct);
-  console.log(currentProducts);
-  renderProduct(currentProducts);
+  resetDom(e.target.value);
+});
+
+btnFilter.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    switch (Number(e.target.dataset.classId)) {
+      case 1:
+        renderProduct(products);
+        break;
+      case 2:
+        resetDom("watch");
+        break;
+      case 3:
+        resetDom("shirt");
+        break;
+      case 4:
+        resetDom("Jewellery");
+        break;
+      case 5:
+        resetDom("gown");
+        break;
+    }
+  });
 });
 
 const findProduct = (products, filterKey) => {
@@ -44,6 +65,7 @@ function renderProduct(_products) {
     renderStr += getRenderProduct(_product);
   });
   productsDOM.innerHTML = renderStr;
+  // counterDOM.innerHTML = _products.length;
 }
 
 function getRenderProduct(_product) {
@@ -56,4 +78,11 @@ function getRenderProduct(_product) {
       <span class=title-product>${_product.title}</span>
     </div>
   </div>`;
+}
+
+function resetDom(str) {
+  filterProduct.keySearch = str;
+  currentProducts = findProduct(products, filterProduct);
+  renderProduct(currentProducts);
+  counterDOM.innerHTML = currentProducts.length;
 }
