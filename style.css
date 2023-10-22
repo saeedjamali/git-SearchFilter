@@ -27,7 +27,7 @@ header {
     margin: auto;
 }
 
-.product-filter > h1{
+.product-filter>h1 {
     margin: 1.4rem;
 }
 
@@ -49,6 +49,10 @@ header {
 }
 
 
+.counter {
+    color: blueviolet;
+    
+}
 
 .filterBtn {
     padding: 1rem 2rem;
@@ -141,6 +145,6 @@ header {
         height: fit-content;
         background-color: rgb(132, 66, 194);
         width: 100%;
-    
+
     }
 }
